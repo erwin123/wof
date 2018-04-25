@@ -1,0 +1,114 @@
+<div class="bundle-card">
+    <div class="motto">
+        <div class="m1">BRINGS TOMORROW TODAY</div>
+        <div class="m2">It's time to make a muf!</div>
+    </div>
+    <div class="form-face">
+        <div class="drawer-container">
+            <div class="square-apps badge" *ngFor="let objProduct of Objectproducttypes" (click)="ngOnClickProduct(objProduct)">
+                <i class="{{objProduct.icon}}" aria-hidden="true"></i>&nbsp;
+                <i class="fa fa-check-circle checked" aria-hidden="true" *ngIf="objProduct.selected"></i><br/>
+                {{objProduct.title}}  
+            </div>
+        </div>
+        <br/>
+        <form class="example-form" (ngSubmit)="ngOnClickSubmit()" validation>
+        <mat-form-field>
+                <input currencyMask matInput placeholder="Harga Kendaraan" required name="Harga"
+                [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',', align:'left', allowNegative:false, precision:0}"
+                [(ngModel)]="modelSimulasi.simulasiHarga"/>
+                <button mat-button *ngIf="modelSimulasi.simulasiHarga" matSuffix mat-icon-button aria-label="Clear" (click)="modelSimulasi.simulasiHarga=''">
+                    <i class="fa fa-times-circle"></i>
+                </button>
+                <mat-hint align="end">Harga minimal Rp.1.000.000</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-progress-spinner *ngIf="!this.Objectprovinces" class="loading-spinner"
+            diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+            <mat-select [disabled]="this.Objectprovinces? false : true" placeholder="Provinsi" required name="Provinsi"
+            [(ngModel)]="modelSimulasi.simulasiProvince" (ngModelChange)="ngOnSelectProvince(modelSimulasi.simulasiProvince)">
+                <mat-option *ngFor="let obj of Objectprovinces" [value]="obj">
+                    {{ obj.province_desc }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-progress-spinner *ngIf="!this.Objectkotas" class="loading-spinner"
+            diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+            <mat-select [disabled]="this.Objectkotas? false : true" placeholder="Kota" required name="Kota"
+            [(ngModel)]="modelSimulasi.simulasiKota" (ngModelChange)="ngOnSelectKota(modelSimulasi.simulasiKota)">
+                <mat-option *ngFor="let obj of (Objectkotas | provinceCode:modelSimulasi.simulasiProvince.province_code)" [value]="obj">
+                    {{ obj.kota_desc }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary">
+            <i class="fa fa-calculator" aria-hidden="true"></i> 
+            SIMULASIKAN
+        </button>
+        </form>
+    </div>
+    
+        <!--
+        <mat-button-toggle-group #group="matButtonToggleGroup" class="basedrate" value="DP">
+            <mat-button-toggle value="DP">
+                <i class="fa fa-sign-language" aria-hidden="true"></i> Jumlah DP
+            </mat-button-toggle>
+            <mat-button-toggle value="Angsuran">
+                <i class="fa fa-american-sign-language-interpreting"  aria-hidden="true"></i>Angsuran
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <div class="infobasedrate">Perhitungan Jumlah : {{group.value}} dipilih</div>
+        <br/><br/>
+        <mat-form-field>
+            <input matInput type="number" placeholder="Harga Kendaraan" [(ngModel)]="this.valueHarga"/>
+                <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <i class="fa fa-times-circle"></i>
+                </button>
+        </mat-form-field>
+        <mat-form-field>
+            <!-- <input matInput placeholder="Produk" aria-label="Produk"
+            [matAutocomplete]="auto" [formControl]="produkCtrl" [(ngModel)]="this.objectGroup">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let obj of Objectgroups" [value]="obj.object_group_desc">
+                        <span>{{ obj.object_group_desc }}</span> |
+                        <small>Code : {{ obj.object_group_code }}</small>
+                    </mat-option>
+            </mat-autocomplete>            
+            <mat-progress-spinner *ngIf="!this.Objectgroups" class="loading-spinner"
+            diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+            <mat-select [disabled]="this.Objectgroups? false : true" placeholder="Produk"
+            [(ngModel)]="this.modObjectGroup" (ngModelChange)="ngOnSelectGroup(this.modObjectGroup)">
+                <mat-option *ngFor="let obj of Objectgroups"
+                [value]="obj.object_group_code">
+                    {{ obj.object_group_desc }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-progress-spinner *ngIf="this.dataBrand" class="loading-spinner"
+            diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+            <mat-select [disabled]="this.Objectbrands? false : true" placeholder="Merk Produk"
+            [(ngModel)]="this.modObjectBrand" (ngModelChange)="ngOnSelectBrand(this.modObjectBrand)">
+                <mat-option *ngFor="let obj of Objectbrands" [value]="obj.brand_code">
+                    {{ obj.brand_desc }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-progress-spinner *ngIf="this.dataModel" class="loading-spinner"
+            diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+            <mat-select [disabled]="this.Objectmodels? false : true" placeholder="Model Produk">
+                <mat-option *ngFor="let obj of Objectmodels" [value]="obj.model_code">
+                    {{ obj.model_desc }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" (click)="ngOnClick()">
+                <i class="fa fa-calculator" aria-hidden="true"></i> 
+                SIMULASIKAN
+        </button>
+    </div>-->
+</div>

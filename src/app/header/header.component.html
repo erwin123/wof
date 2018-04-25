@@ -1,0 +1,20 @@
+<mat-toolbar class="home-toolbar effect2" [class.focused]="isCollapsed">
+  <!-- <div class="home-toolbar-menu" *ngIf=> -->
+  <mat-toolbar-row *ngIf="isCollapsed" class="upper-menu">
+      <div [class.collapsed]="isCollapsed" [style.height]="isCollapsed ? maxHeight+'px' : 'auto'">
+          <button>
+              <span><i class="fa fa-question-circle"></i> BANTUAN</span>
+          </button>
+      </div>
+  </mat-toolbar-row> 
+  <mat-toolbar-row>
+      <div class="home-logo">
+          <img src="assets/mandiriutamafinance.jpg" alt=""/>
+        </div>
+        <span class="right-spacer"><span *ngIf="Harga.length > 0">Harga Unit {{this.Harga | currency:'Rp.':'false':'2.0-4'}}</span></span>
+        <button mat-icon-button (click)="toggleMenu()">
+          <i *ngIf="!isCollapsed" class="fa fa-chevron-down" aria-hidden="true"></i>
+          <i *ngIf="isCollapsed" class="fa fa-chevron-up" aria-hidden="true"></i>
+        </button>
+  </mat-toolbar-row>
+</mat-toolbar>

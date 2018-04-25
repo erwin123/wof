@@ -1,0 +1,47 @@
+<div class="order-container">
+    <div class="order-title">Ringkasan Pinjaman Unit</div>
+    <br/>
+    <div class="summary">
+        <div class="summary-label">Wilayah / Area</div>
+        <div class="summary-value">{{modelAngsuran.AreaCode}}</div>
+        <div class="summary-label">Angsuran</div>
+        <div class="summary-value">{{modelAngsuran.Angsuran | currency:'Rp.':'false':'2.0-4'}} Perbulan</div>
+        <div class="summary-label">Pembayaran pertama</div>
+        <div class="summary-value">{{modelAngsuran.Downpayment | currency:'Rp.':'false':'2.0-4'}}</div>
+        <div class="summary-label">Jangka Waktu</div>
+        <div class="summary-value">{{modelAngsuran.Tenor}} Tahun</div>
+    </div>
+    <br/>
+    <div class="order-title">Pengisian Data Diri</div>
+    <br/>
+    <form class="form-pengajuan">
+    <mat-form-field>
+        <input matInput placeholder="Nama Lengkap">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="No KTP">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-progress-spinner *ngIf="this.dataBrand" class="loading-spinner"
+        diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+        <mat-select [disabled]="this.Objectbrands? false : true" placeholder="Merk Produk" name="Brand"
+        [(ngModel)]="this.modObjectBrand" (ngModelChange)="ngOnSelectBrand(this.modObjectBrand)">
+            <mat-option *ngFor="let obj of Objectbrands" [value]="obj.brand_code">
+                {{ obj.brand_desc }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-progress-spinner *ngIf="this.dataModel" class="loading-spinner"
+        diameter="20" color="accent" mode="indeterminate"></mat-progress-spinner>
+        <mat-select [disabled]="this.Objectmodels? false : true" placeholder="Model Produk" name="Model">
+            <mat-option *ngFor="let obj of Objectmodels" [value]="obj.model_code">
+                {{ obj.model_desc }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="action-control" fxLayout="row" fxLayoutAlign="space-around center">
+        <button mat-raised-button color="primary" fxFlex="45%"> <i class="fa fa-handshake-o" aria-hidden="true"></i> &nbsp; AJUKAN </button>
+    </div>
+    </form>
+</div>

@@ -1,0 +1,64 @@
+.container{
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+.bundle-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.bundle-banner{
+    -webkit-box-shadow: 0 5px 3px -3px #000;
+	-moz-box-shadow: 0 5px 3px -3px #000;
+    box-shadow: 0 5px 3px -3px #000;
+}
+
+.bundle-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@media (max-width:1600px) {
+    .container{
+        max-width: 100%;
+        margin: 0px auto;
+    }
+    
+    .bundle-header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+    }
+    
+    .bundle-banner{
+       position: absolute;
+       top:0;
+       left :0;
+       height: 80%;
+       overflow: hidden;
+       opacity: 0.9;
+       z-index: -1;
+    }
+}
+
+@media (max-width:900px)  {
+    .bundle-banner{
+        position: relative;
+        z-index: -1;
+        display: none;
+    }
+}
+
+@media (max-width:500px)  {
+    .bundle-banner{
+        position: relative;
+        z-index: -1;
+        display: none;
+    }
+}

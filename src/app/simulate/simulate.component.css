@@ -1,0 +1,68 @@
+.simulate-container{
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  right: 8%;
+  margin: auto;
+  margin-bottom: 5%;
+  z-index: 2 !important;
+}
+
+
+
+.opsi-card {
+  /* min-width: 100px;
+  max-width: 135px; */
+  width: 38.5%;
+  max-width: 160px;
+  float: left;
+  margin: 1%;
+}
+
+.opsi-card:hover{
+  -webkit-box-shadow: 0px 0px 3px 3px #ff2600;
+	-moz-box-shadow: 0px 0px 3px 3px #ff2600;
+    box-shadow: 0px 0px 3px 3px #ff2600;
+    cursor: pointer;
+}
+
+.opsi-card mat-card-title{
+  font-size: 170%;
+  font-weight: bold;
+  border-bottom: 1px solid #ff2600;
+  color:#003665;
+  font-family: 'Roboto Condensed';
+}
+
+.card-content-label{
+  color:#8a8a8a;
+  font-size: 12px;
+}
+.card-content-value{
+  color:#003665;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 115%;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+.mat-card-header{
+  display: block !important;
+}
+
+@media (max-width:500px) {
+  .simulate-container{
+      position: absolute;
+      top: 10%;
+      left: 1%;
+      right: 1%;
+      margin: auto;
+      margin-bottom: 15%;
+  }
+  /* .opsi-card {
+    width: 38%;
+    max-width: 150px;
+    float: left;
+    margin: 1%;
+  } */
+}

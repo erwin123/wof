@@ -1,0 +1,255 @@
+.loading-spinner{
+    width: 1px;
+    height: 1px;
+}
+
+.drawer-container{
+    width: 100% !important;
+    margin:0 auto;
+    padding-bottom: 20px !important;
+    z-index: 10;
+    position: relative;
+}
+
+.square-apps{
+    width: 26% !important;
+    min-width: 80px;
+    font-size: 75%;
+    color: #fff;
+    float: left;
+    background: #003665;
+    margin:5px ;
+    text-align: center;
+    -webkit-box-shadow: 0 5px 3px -3px #777;
+	-moz-box-shadow: 0 5px 3px -3px #777;
+    box-shadow: 0 5px 3px -3px #777;
+    border-radius: 5px;
+    cursor: pointer !important;
+    z-index: 11;
+}
+
+.square-apps:hover{
+    background: #00549e;
+    -webkit-box-shadow: 1px 10px 6px -6px #777;
+	-moz-box-shadow: 1px 10px 6px -6px #777;
+    box-shadow: 1px 10px 6px -6px #777;
+}
+
+@media (max-width:1600px) {
+    ::ng-deep snack-bar-container.success-snackbar {
+        background-color: #fff;
+        color: red;
+    }
+
+    .bundle-card{
+        position: absolute;
+        top: 15%;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .bundle-card div{
+        width: 46%;
+        float: left;
+        padding:2% 2% 1% 2%;
+    }
+
+    .motto .m1{
+        font-size: 400%;
+        font-family: 'Anton';
+        width: 100%;
+        line-height:120%;
+        letter-spacing: 5px;
+        color: #fff;
+        text-shadow: 1px 0 8px #000;
+        float: none;
+    }
+
+    .motto .m2{
+        font-size: 150%;
+        font-family: 'Roboto Condensed';
+        line-height:80%;
+        letter-spacing: 3px;
+        color: #fff;
+        text-shadow: 2px 0 5px #000000;
+        float: none;
+        width: 100%;
+    }
+
+    .form-face{
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 18px !important;
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+        -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
+        border: #ccc solid 1px;
+        position:relative;
+        width: calc(46% - 2px) !important;
+    }
+
+    .form-face mat-form-field{
+        padding:0 5px 0 16px !important;
+        display: block;
+        z-index: 0 !important;
+    }
+
+    .form-face button{
+        
+        margin-left:2% !important;
+    }
+
+    .form-face .message{
+        /* margin-right: 5%;
+        margin-top:0;
+        font-size: 15px;
+        float:right !important; */
+        display: none;
+    }
+}
+
+
+@media (max-width:900px)  {
+    ::ng-deep snack-bar-container.success-snackbar {
+        background-color: #fff;
+        color: red;
+    }
+    .bundle-card{
+        position: absolute;
+        top: 15%;
+        max-width: 80%;
+        margin-left: 10%;
+    }
+    
+    .bundle-card div{
+        width: 46%;
+        float: left;
+        padding:2% 2% 1% 2%;
+    }
+
+    .motto{
+        width: 100%;
+    }   
+
+    .motto .m1{
+        font-size: 270%;
+        font-family: 'Anton';
+        width: 100%;
+        line-height:100%;
+        letter-spacing: 5px;
+        color: #fff;
+        text-shadow: 1px 0 8px #000000;
+        float: none;
+    }
+
+    .motto .m2{
+        font-size: 110%;
+        font-family: 'Roboto Condensed';
+        line-height:70%;
+        letter-spacing: 3px;
+        color: #fff;
+        text-shadow: 2px 0 5px #000000;
+        float: none;
+        width: 100%;
+    }
+    .form-face{
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 18px !important;
+        padding-top: 5px;
+    }
+    
+    .form-face mat-form-field{
+        display: block;
+    }    
+
+    .form-face button{
+        width: 90% !important;
+        margin-left: 6% !important;
+    } 
+
+    .form-face .message{
+        /* margin-right: 5%;
+        margin-top:0;
+        font-size: 15px;
+        float:right !important; */
+        display: none;
+    }
+}
+
+@media (max-width:500px)  {
+    ::ng-deep snack-bar-container.success-snackbar {
+        background-color: rgb(48, 48, 48);
+        color: #fff;
+    }
+    .bundle-card{
+        position: absolute;
+        top: 10%;
+        width: 96% !important;
+        max-width: 96% !important;
+        padding: 0 2% 0 2% !important;
+        margin-left: 0% !important;
+        margin-bottom: 10% !important;
+        z-index: 1;
+    }
+
+    .bundle-card div{
+        width: 100%;
+        float: left;
+    }
+
+    .motto{
+        width: 96% !important;
+        padding: 2% 2% 2% 2% !important;
+        margin-bottom: 10px;
+    }   
+
+    .motto .m1{
+        font-size: 200%;
+        font-family: 'Anton';
+        width: 100%;
+        line-height:110%;
+        letter-spacing: 5px;
+        color: #fff;
+        text-shadow: 1px 0 8px #000000;
+        float: none;
+    }
+
+    .motto .m2{
+        font-size: 130%;
+        font-family: 'Roboto Condensed';
+        line-height:50%;
+        letter-spacing: 3px;
+        color: #fff;
+        text-shadow: 2px 0 5px #000000;
+        float: none;
+        width: 100%;
+    }
+    
+    .form-face{
+        width: 96% !important;
+        padding: 2% 2% 2% 2% !important;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 18px !important;
+        margin-bottom: 5% !important;
+    }
+    
+    .form-face mat-form-field{
+        display: block;
+    }    
+
+    .form-face button, .message{
+        width: 90% !important;
+        margin-left: 5% !important;
+    } 
+}
+
+.message{
+    color:red;
+    text-align: center;
+}
+
+.checked{
+    color:rgb(255, 217, 0);
+}

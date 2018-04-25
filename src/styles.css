@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+@media (max-width:500px)  {
+    body{
+        margin: 0 auto;
+        background: #003665 url('assets/img/banner5.jpg') no-repeat !important;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#003665;
+    }
+}
+
+@media (max-width:900px)  {
+    body{
+        margin: 0 auto;
+        background: #003665 url('assets/img/banner5.jpg') no-repeat !important;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#003665;
+    }
+}
+
+@media (max-width:1600px) {
+    body{
+        margin: 0 auto;
+        background: #003665;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#003665;
+    }
+}
+#content{
+    color:transparent;
+}
+
+.mat-raised-button.mat-primary{
+    background-color: #003665 !important;
+}
+
+.mat-toolbar.mat-primary{
+    background-color: #003665 !important;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('RobotoCondensed-Regular.woff2') format('woff2'),
+        url('RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url('Anton.woff2') format('woff2'),
+        url('Anton.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

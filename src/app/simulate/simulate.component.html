@@ -1,0 +1,15 @@
+<div class="simulate-container">
+    <mat-card class="opsi-card" *ngFor="let objOpsi of opsi" (click)="onSelectOpsi(objOpsi)">
+        <mat-card-header>
+          <mat-card-title>{{objOpsi.Opsi}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="card-content-label">Angsuran</div>
+          <div class="card-content-value">{{objOpsi.Angsuran | currency:'Rp.':'false':'2.0-4'}}<div>Perbulan</div></div>
+          <div class="card-content-label">Jangka Waktu</div>
+          <div class="card-content-value">{{objOpsi.Tenor}} Tahun</div>
+          <div class="card-content-label">Pembayaran pertama</div>
+          <div class="card-content-value">{{objOpsi.Downpayment | currency:'Rp.':'false':'2.0-4'}}</div>
+        </mat-card-content>
+    </mat-card>
+</div>

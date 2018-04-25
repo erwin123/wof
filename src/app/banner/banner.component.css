@@ -1,0 +1,45 @@
+.carousel{
+    overflow:hidden;
+    width:100%;
+}
+
+.slides{
+    margin: 0px;
+    list-style:none;
+    position:relative;
+    width:500%;
+    /* Number of panes * 100% */
+    /* Slide effect Animations*/
+    -moz-animation:carousel 150s infinite;
+    -webkit-animation:carousel 150s infinite;
+    animation:carousel 150s infinite;
+}
+.slides > li{
+    position:relative;
+    float:left;
+    width: 20%; /* 100 / number of panes */
+}
+.carousel img{
+    display:block;
+    width:100%;
+}
+
+@keyframes carousel{
+    0%    { left:-2.5%; }
+    11%   { left:-2.5%; }
+    12.5% { left:-102.5%; }
+    23.5% { left:-102.5%; }
+    25%   { left:-202.5%; }
+    36%   { left:-202.5%; }
+    37.5% { left:-302.5%; }
+    48.5% { left:-302.5%; }
+    50%   { left:-403%; }
+    61%   { left:-403%; }
+    62.5% { left:-302.5%; }
+    73.5% { left:-302.5%; }
+    75%   { left:-203%; }
+    86%   { left:-203%; }
+    87.5% { left:-102.5%; }
+    98.5% { left:-102.5%; }
+    100%    { left:-2.5%; }
+}
